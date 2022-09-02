@@ -17,13 +17,6 @@ public class EmployeeController {
     @Autowired
     private EmployeeRepository employeeRepository;
 
- /*   @GetMapping({"/showEmployees","/","list"})
-    public ModelAndView showEmployees(){
-        ModelAndView model =new ModelAndView("employees");
-        model.addObject("employeeList",employeeRepository.findAll());
-        return model;
-    }*/
-
     @GetMapping("/")
     public String showEmployees(Model model){
         List<Employee> employeeList = employeeRepository.findAll();
